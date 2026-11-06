@@ -1,0 +1,41 @@
+{
+  "name": "youtube-embed-html",
+  "version": "0.1.0",
+  "description": "Generate lightweight YouTube embeds with faithful player placeholders and no JavaScript required by default",
+  "type": "module",
+  "license": "MIT",
+  "author": "Jonny Buchanan <jonathan.buchanan@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insin/youtube-embed-html.git"
+  },
+  "homepage": "https://github.com/insin/youtube-embed-html#readme",
+  "bugs": {
+    "url": "https://github.com/insin/youtube-embed-html/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./dom": {
+      "types": "./dist/dom.d.ts",
+      "import": "./dist/dom.js",
+      "default": "./dist/dom.js"
+    }
+  },
+  "files": ["dist", "LICENSE"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit && tsc --ignoreConfig --noEmit --module nodenext --target es2020 type-tests/defaults.ts",
+    "test": "npm run build && node --test",
+    "prepack": "npm run build"
+  },
+  "keywords": ["youtube", "embed", "html", "srcdoc", "lazy", "static", "ssr"],
+  "devDependencies": {
+    "linkedom": "0.18.x",
+    "typescript": "7.x"
+  }
+}

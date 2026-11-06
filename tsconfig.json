@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "lib": ["ES2020", "DOM"],
+    "module": "NodeNext",
+    "noEmitOnError": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "target": "ES2020",
+    "verbatimModuleSyntax": true
+  },
+  "include": ["src/**/*.ts"]
+}
