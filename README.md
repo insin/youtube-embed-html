@@ -89,8 +89,8 @@ The generated embed uses a responsive 16:9 viewport by default. Set `aspectRatio
 
 ```js
 const html = renderYouTubeEmbed({
-  videoId: 'lQKdEdzHnfU',
-  title: 'A classic video',
+  videoId: '6AXPnH0C9UA',
+  title: 'The Count Censored',
   aspectRatio: 4 / 3,
   iframeAttributes: {
     class: 'video',
